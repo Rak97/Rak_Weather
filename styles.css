@@ -95,3 +95,19 @@ strong#temperature {
   top: 1.5em;
   font-size: 70px;
 }
+
+.weather-forecast {
+  font-family: "Readex Pro", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.weather-forecast-temp-min {
+  color: grey;
+}
+
+.weather-forecast-temp-max {
+  color: white;
+}
