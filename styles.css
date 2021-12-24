@@ -1,0 +1,51 @@
+.containerColour {
+  max-width: 685px;
+  margin: 0px auto;
+  padding: 15px 50px;
+  border-style: none;
+  border-radius: 45px;
+  background-color: #000000d0;
+  max-height: 76vh;
+  font-family: "Readex Pro", sans-serif;
+}
+
+body {
+  margin: 80px auto;
+  padding: 0px auto;
+  text-align: center;
+  background-size: cover;
+  background-image: url(https://i.pinimg.com/originals/12/01/90/1201906dcf2eef9d5197c650dc3af91e.gif);
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: white;
+}
+
+h2 {
+  text-align: left;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+h3 {
+  text-align: right;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
