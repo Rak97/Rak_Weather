@@ -49,3 +49,49 @@ hr {
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+}
+
+button {
+  border-radius: 50%;
+  border: none;
+  height: 47px;
+  width: 47px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  margin-right: 0.9rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+input#search-bar.form-control {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  margin-top: 1.5rem;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+}
+
+img#icon {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 1.5rem;
+}
+
+strong#temperature {
+  top: 1.5em;
+  font-size: 70px;
+}
