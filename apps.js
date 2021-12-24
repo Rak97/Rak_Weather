@@ -18,3 +18,48 @@ function displayTemperature(response) {
           "src",
           `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         );
+//Date 
+
+        let currentDate = new Date();
+        let date = document.querySelector("#date");
+        let weekdays = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        let months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        date.innerHTML = `${weekdays[currentDate.getDay()]} ${months[currentDate.getUTCMonth()]
+          } ${currentDate.getDate()}`;
+
+      };
+      //Time
+      var dt = new Date();
+      document.getElementById("time").innerHTML = (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+
+      const hour = new Date().getHours();
+      let greeting;
+
+      if (hour < 12) {
+        greeting = "AM";
+      } else {
+        greeting = "PM";
+      }
+
+      document.getElementById("format").innerHTML = greeting;
