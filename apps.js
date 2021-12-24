@@ -99,3 +99,6 @@ function displayTemperature(response) {
 
     let searchGeo = document.querySelector("#liveLocate");
       searchGeo.addEventListener("click", handleGeo);
+    
+    // Display City 
+    search("Yellowknife");
