@@ -111,3 +111,27 @@ strong#temperature {
 .weather-forecast-temp-max {
   color: white;
 }
+
+small {
+  font-family: "Readex Pro", sans-serif;
+  font-weight: bolder;
+  margin: 425px;
+  color: black;
+}
+
+p {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.link {
+  color: navy;
+}
+
+a.link:hover {
+  cursor: pointer;
+  color: blanchedalmond;
+}
