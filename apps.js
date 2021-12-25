@@ -1,9 +1,9 @@
-function displayForecast() {
+   function displayForecast() {
 
-    let forecastElement = document.querySelector("#forecast"); 
+        let forecastElement = document.querySelector("#forecast"); 
 
-    let forecastHTML = `<div class="row">`;
-    let days = ["Fri.", "Sat.", "Sun.", "Mon.", "Tues.", "Wed."]; 
+        let forecastHTML = `<div class="row">`;
+        let days = ["Fri.", "Sat.", "Sun.", "Mon.", "Tues.", "Wed."]; 
         days.forEach(function(day){
           
           forecastHTML = 
@@ -15,12 +15,12 @@ function displayForecast() {
         </div>`;
         }) 
 
-    forecastHTML = forecastHTML + `</div>`
-    forecastElement.innerHTML = forecastHTML;
+        forecastHTML = forecastHTML + `</div>`
+        forecastElement.innerHTML = forecastHTML;
 
      } 
 
-function displayTemperature(response) {
+     function displayTemperature(response) {
         let descripitionElement = document.querySelector("#descripition");
         let cityElement = document.querySelector("#city");
         let temperatureElement = document.querySelector("#temperature");
@@ -40,7 +40,8 @@ function displayTemperature(response) {
           "src",
           `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         );
-//Date 
+
+        //Date 
 
         let currentDate = new Date();
         let date = document.querySelector("#date");
@@ -85,7 +86,8 @@ function displayTemperature(response) {
       }
 
       document.getElementById("format").innerHTML = greeting;
-           //Searching for any city in the world 
+
+      //Searching for any city in the world 
 
       function search(city) {
         let apiKey = "4603cd08f9aa4435f5a1a0fde738051c";
@@ -101,26 +103,29 @@ function displayTemperature(response) {
 
       let form = document.querySelector("#search-form");
       form.addEventListener("submit", handleSubmit);
-    
-    // How to build a current geolive Location button
 
-    function retrievePosition(position) {
-        let latitude = position.coords.latitude;
-        let longitude = position.coords.longitude;
-        let units = "metric";
-        let apiKey = "4603cd08f9aa4435f5a1a0fde738051c";
-        let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
-        let apiUrl = `${apiEndPoint}lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
-        axios.get(apiUrl).then(displayTemperature);
-    }
+      // How to build a current geolive Location button
+
+      function retrievePosition(position) {
+          let latitude = position.coords.latitude;
+          let longitude = position.coords.longitude;
+          let units = "metric";
+          let apiKey = "4603cd08f9aa4435f5a1a0fde738051c";
+          let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
+          let apiUrl = `${apiEndPoint}lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+          axios.get(apiUrl).then(displayTemperature);
+        }
 
 
-    function handleGeo() {
+      function handleGeo() {
           navigator.geolocation.getCurrentPosition(retrievePosition); //Seek permission from user
-    }
+        }
 
-    let searchGeo = document.querySelector("#liveLocate");
+      let searchGeo = document.querySelector("#liveLocate");
       searchGeo.addEventListener("click", handleGeo);
-    
-    // Display City 
-    search("Yellowknife");
+
+      // Displaying Forecast 
+        displayForecast();
+
+      // Display City 
+        search("Yellowknife");
