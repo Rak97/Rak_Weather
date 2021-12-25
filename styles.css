@@ -139,7 +139,7 @@ a.links {
   color: red;
 }
 
-a.link:hover {
+a.links:hover {
   cursor: pointer;
   color: blanchedalmond;
 }
